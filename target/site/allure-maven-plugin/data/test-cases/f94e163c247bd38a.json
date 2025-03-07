@@ -1,0 +1,228 @@
+{
+  "uid" : "f94e163c247bd38a",
+  "name" : "Test unsuccessful user login",
+  "fullName" : "TestUserLoginParameterizedNegative.testUserLogin[Login: null, Password: wrong-password]",
+  "historyId" : "34336c95b130989be9a453a876506905",
+  "time" : {
+    "start" : 1741349490013,
+    "stop" : 1741349491643,
+    "duration" : 1630
+  },
+  "description" : "Verify that a user cannot log in with invalid credentials",
+  "descriptionHtml" : "<p>Verify that a user cannot log in with invalid credentials</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Verify that a user cannot log in with invalid credentials",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Send POST request to create a user",
+      "time" : {
+        "start" : 1741349490018,
+        "stop" : 1741349490414,
+        "duration" : 396
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "userRequest",
+        "value" : "json.UserRequest@1cb3de26"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Assert the response from the user creation request",
+      "time" : {
+        "start" : 1741349490414,
+        "stop" : 1741349490415,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@618b147b"
+      }, {
+        "name" : "expectedStatusCode",
+        "value" : "200"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Extract access token from the response",
+      "time" : {
+        "start" : 1741349490415,
+        "stop" : 1741349490439,
+        "duration" : 24
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@618b147b"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Send POST request to log in a user",
+      "time" : {
+        "start" : 1741349490440,
+        "stop" : 1741349490825,
+        "duration" : 385
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "userLoginRequest",
+        "value" : "json.UserLoginRequest@2acacdf"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Assert the response from the user creation request",
+      "time" : {
+        "start" : 1741349490825,
+        "stop" : 1741349490826,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@b632594"
+      }, {
+        "name" : "expectedStatusCode",
+        "value" : "401"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Assert the value of a key in the response body",
+      "time" : {
+        "start" : 1741349490826,
+        "stop" : 1741349490862,
+        "duration" : 36
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@b632594"
+      }, {
+        "name" : "key",
+        "value" : "message"
+      }, {
+        "name" : "expectedValue",
+        "value" : "email or password are incorrect"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Send DELETE request to delete a user",
+      "time" : {
+        "start" : 1741349490862,
+        "stop" : 1741349491642,
+        "duration" : 780
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "accessToken",
+        "value" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Y2FlMjcxOWVkMjgwMDAxYjU4ZGU5ZSIsImlhdCI6MTc0MTM0OTQ4OSwiZXhwIjoxNzQxMzUwNjg5fQ.5f1GE7Nwrlv9Ivti4BwUoEV84V_UzpLk-z9Hw0U6nKw"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Assert the response from the user creation request",
+      "time" : {
+        "start" : 1741349491642,
+        "stop" : 1741349491642,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@2627da4c"
+      }, {
+        "name" : "expectedStatusCode",
+        "value" : "202"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 8,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "TestUserLoginParameterizedNegative"
+  }, {
+    "name" : "testMethod",
+    "value" : "testUserLogin[Login: null, Password: wrong-password]"
+  }, {
+    "name" : "suite",
+    "value" : "TestUserLoginParameterizedNegative"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-MENV2I2"
+  }, {
+    "name" : "thread",
+    "value" : "6992@DESKTOP-MENV2I2.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f94e163c247bd38a.json",
+  "parameterValues" : [ ]
+}

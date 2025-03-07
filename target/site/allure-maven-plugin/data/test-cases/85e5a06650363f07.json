@@ -1,0 +1,270 @@
+{
+  "uid" : "85e5a06650363f07",
+  "name" : "Test retrieving user orders with authorization",
+  "fullName" : "TestGetUserOrders.testGetUserOrdersWithAuthorization",
+  "historyId" : "6f8590cefa960bf01e54e488631660ca",
+  "time" : {
+    "start" : 1741349469724,
+    "stop" : 1741349473938,
+    "duration" : 4214
+  },
+  "description" : "Verify that a user can retrieve their orders when authorized",
+  "descriptionHtml" : "<p>Verify that a user can retrieve their orders when authorized</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Verify that a user can retrieve their orders when authorized",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Send POST request to create a user",
+      "time" : {
+        "start" : 1741349469725,
+        "stop" : 1741349470139,
+        "duration" : 414
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "userRequest",
+        "value" : "json.UserRequest@698e2cba"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Assert the response from the user creation request",
+      "time" : {
+        "start" : 1741349470139,
+        "stop" : 1741349470139,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@2565b097"
+      }, {
+        "name" : "expectedStatusCode",
+        "value" : "200"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Extract access token from the response",
+      "time" : {
+        "start" : 1741349470140,
+        "stop" : 1741349470170,
+        "duration" : 30
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@2565b097"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Send POST request to create an order",
+      "time" : {
+        "start" : 1741349470171,
+        "stop" : 1741349472536,
+        "duration" : 2365
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "orderRequest",
+        "value" : "json.OrderRequest@6c5e6da"
+      }, {
+        "name" : "accessToken",
+        "value" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Y2FlMjVkOWVkMjgwMDAxYjU4ZGU4YSIsImlhdCI6MTc0MTM0OTQ2OSwiZXhwIjoxNzQxMzUwNjY5fQ.UyIuQEneVrkcIRjJsX7TSlHSnuFZ7ZUEp7DnYgfWU-o"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Assert the response from the user creation request",
+      "time" : {
+        "start" : 1741349472537,
+        "stop" : 1741349472538,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@3f4b59fd"
+      }, {
+        "name" : "expectedStatusCode",
+        "value" : "200"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Send GET request to retrieve user orders",
+      "time" : {
+        "start" : 1741349472538,
+        "stop" : 1741349473146,
+        "duration" : 608
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "accessToken",
+        "value" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Y2FlMjVkOWVkMjgwMDAxYjU4ZGU4YSIsImlhdCI6MTc0MTM0OTQ2OSwiZXhwIjoxNzQxMzUwNjY5fQ.UyIuQEneVrkcIRjJsX7TSlHSnuFZ7ZUEp7DnYgfWU-o"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Assert the response from the user creation request",
+      "time" : {
+        "start" : 1741349473147,
+        "stop" : 1741349473147,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@2a6b6f4"
+      }, {
+        "name" : "expectedStatusCode",
+        "value" : "200"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Assert the value of a key in the response body",
+      "time" : {
+        "start" : 1741349473148,
+        "stop" : 1741349473189,
+        "duration" : 41
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@2a6b6f4"
+      }, {
+        "name" : "key",
+        "value" : "success"
+      }, {
+        "name" : "expectedValue",
+        "value" : "true"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Send DELETE request to delete a user",
+      "time" : {
+        "start" : 1741349473190,
+        "stop" : 1741349473931,
+        "duration" : 741
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "accessToken",
+        "value" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Y2FlMjVkOWVkMjgwMDAxYjU4ZGU4YSIsImlhdCI6MTc0MTM0OTQ2OSwiZXhwIjoxNzQxMzUwNjY5fQ.UyIuQEneVrkcIRjJsX7TSlHSnuFZ7ZUEp7DnYgfWU-o"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Assert the response from the user creation request",
+      "time" : {
+        "start" : 1741349473932,
+        "stop" : 1741349473938,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@582ce329"
+      }, {
+        "name" : "expectedStatusCode",
+        "value" : "202"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 10,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "TestGetUserOrders"
+  }, {
+    "name" : "testMethod",
+    "value" : "testGetUserOrdersWithAuthorization"
+  }, {
+    "name" : "suite",
+    "value" : "TestGetUserOrders"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-MENV2I2"
+  }, {
+    "name" : "thread",
+    "value" : "6992@DESKTOP-MENV2I2.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "85e5a06650363f07.json",
+  "parameterValues" : [ ]
+}

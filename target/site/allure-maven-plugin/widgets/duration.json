@@ -1,0 +1,211 @@
+[ {
+  "uid" : "456738bd11bddfd3",
+  "name" : "Test unsuccessful user login",
+  "time" : {
+    "start" : 1741349493306,
+    "stop" : 1741349494715,
+    "duration" : 1409
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6d793ac2382e3a9a",
+  "name" : "Test updating user data with authorization",
+  "time" : {
+    "start" : 1741349499846,
+    "stop" : 1741349501578,
+    "duration" : 1732
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "53e358caf3ef7017",
+  "name" : "Test unsuccessful user login",
+  "time" : {
+    "start" : 1741349491646,
+    "stop" : 1741349493283,
+    "duration" : 1637
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a86c8b170df089ca",
+  "name" : "Test successful user login",
+  "time" : {
+    "start" : 1741349488218,
+    "stop" : 1741349490005,
+    "duration" : 1787
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "78e2584483d6114b",
+  "name" : "Test creating an order with authorization and invalid ingredients",
+  "time" : {
+    "start" : 1741349481823,
+    "stop" : 1741349483862,
+    "duration" : 2039
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5abf9d50985ffdf9",
+  "name" : "Test creating a user with valid data",
+  "time" : {
+    "start" : 1741349485631,
+    "stop" : 1741349486934,
+    "duration" : 1303
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "85e5a06650363f07",
+  "name" : "Test retrieving user orders with authorization",
+  "time" : {
+    "start" : 1741349469724,
+    "stop" : 1741349473938,
+    "duration" : 4214
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "52999854e551174d",
+  "name" : "Test updating user data with authorization",
+  "time" : {
+    "start" : 1741349501604,
+    "stop" : 1741349503429,
+    "duration" : 1825
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b5037f655eee1477",
+  "name" : "Test updating user data with authorization",
+  "time" : {
+    "start" : 1741349503435,
+    "stop" : 1741349505057,
+    "duration" : 1622
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "13b6f46a473edbee",
+  "name" : "Test creating an order with authorization and valid ingredients",
+  "time" : {
+    "start" : 1741349473960,
+    "stop" : 1741349477718,
+    "duration" : 3758
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d8205b0232b7832e",
+  "name" : "Test updating user data without authorization",
+  "time" : {
+    "start" : 1741349496383,
+    "stop" : 1741349498200,
+    "duration" : 1817
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9f707e027d6a4e2",
+  "name" : "Test creating a user with missing required fields",
+  "time" : {
+    "start" : 1741349487805,
+    "stop" : 1741349488191,
+    "duration" : 386
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fdb42e75ca61d585",
+  "name" : "Test creating a user with missing required fields",
+  "time" : {
+    "start" : 1741349487439,
+    "stop" : 1741349487781,
+    "duration" : 342
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f463638a9db32364",
+  "name" : "Test retrieving user orders without authorization",
+  "time" : {
+    "start" : 1741349461403,
+    "stop" : 1741349469535,
+    "duration" : 8132
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a7daf7f82b2a86f2",
+  "name" : "Test updating user data without authorization",
+  "time" : {
+    "start" : 1741349494744,
+    "stop" : 1741349496354,
+    "duration" : 1610
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f94e163c247bd38a",
+  "name" : "Test unsuccessful user login",
+  "time" : {
+    "start" : 1741349490013,
+    "stop" : 1741349491643,
+    "duration" : 1630
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "533e9f87b1cda3b4",
+  "name" : "Test creating an order without authorization but with valid ingredients",
+  "time" : {
+    "start" : 1741349480081,
+    "stop" : 1741349481815,
+    "duration" : 1734
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4e680c57213831d9",
+  "name" : "Test creating a user that already exists",
+  "time" : {
+    "start" : 1741349483869,
+    "stop" : 1741349485605,
+    "duration" : 1736
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "67f7a5ce1b551d89",
+  "name" : "Test creating a user with missing required fields",
+  "time" : {
+    "start" : 1741349487003,
+    "stop" : 1741349487423,
+    "duration" : 420
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "28c5b961de252f27",
+  "name" : "Test creating an order with authorization but without ingredients",
+  "time" : {
+    "start" : 1741349477729,
+    "stop" : 1741349480074,
+    "duration" : 2345
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d317c9ca7e036c1d",
+  "name" : "Test updating user data without authorization",
+  "time" : {
+    "start" : 1741349498206,
+    "stop" : 1741349499838,
+    "duration" : 1632
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

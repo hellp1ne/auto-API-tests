@@ -9,24 +9,25 @@ import json.UserRequest;
 import json.UserUpdateRequest;
 import uri.RequestSpec;
 
-import java.util.UUID;
-
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
 public class UserApiClient {
 
-    @Step("Generate a random UUID and append it to a domain")
-    public static String generateRandomEmail() {
-        return "user-" + UUID.randomUUID().toString() + "@example.com";
-    }
+    // Define constants for API endpoints
+    private static final String REGISTER_ENDPOINT = "/api/auth/register";
+    private static final String LOGIN_ENDPOINT = "/api/auth/login";
+    private static final String CREATE_ORDER_ENDPOINT = "/api/orders";
+    private static final String GET_USER_ORDERS_ENDPOINT = "/api/orders";
+    private static final String UPDATE_USER_ENDPOINT = "/api/auth/user";
+    private static final String DELETE_USER_ENDPOINT = "/api/auth/user";
 
     @Step("Send POST request to create a user")
     public Response createUser(UserRequest userRequest) {
         return given()
                 .spec(RequestSpec.getRequestSpec()) // Use the common request specification
                 .body(userRequest) // Serialize the UserRequest object to JSON
-                .post("/api/auth/register"); // Replace with the actual endpoint
+                .post(REGISTER_ENDPOINT); // Use the constant for the endpoint
     }
 
     @Step("Send POST request to log in a user")
@@ -34,7 +35,7 @@ public class UserApiClient {
         return given()
                 .spec(RequestSpec.getRequestSpec()) // Use the common request specification
                 .body(userLoginRequest) // Serialize the UserLoginRequest object to JSON
-                .post("/api/auth/login"); // Endpoint for login
+                .post(LOGIN_ENDPOINT); // Use the constant for the endpoint
     }
 
     @Step("Send POST request to create an order")
@@ -48,7 +49,7 @@ public class UserApiClient {
         return given()
                 .spec(requestSpec) // Use the request specification
                 .body(orderRequest) // Serialize the OrderRequest object to JSON
-                .post("/api/orders"); // Endpoint for creating an order
+                .post(CREATE_ORDER_ENDPOINT); // Use the constant for the endpoint
     }
 
     @Step("Send GET request to retrieve user orders")
@@ -61,7 +62,7 @@ public class UserApiClient {
 
         return given()
                 .spec(requestSpec) // Use the request specification
-                .get("/api/orders"); // Endpoint for retrieving user orders
+                .get(GET_USER_ORDERS_ENDPOINT); // Use the constant for the endpoint
     }
 
     @Step("Send PATCH request to update user data")
@@ -75,7 +76,7 @@ public class UserApiClient {
         return given()
                 .spec(requestSpec) // Use the request specification
                 .body(userUpdateRequest) // Serialize the UserUpdateRequest object to JSON
-                .patch("/api/auth/user"); // Endpoint for updating user data
+                .patch(UPDATE_USER_ENDPOINT); // Use the constant for the endpoint
     }
 
     @Step("Assert the response from the user creation request")
@@ -94,12 +95,18 @@ public class UserApiClient {
     public Response deleteUser(String accessToken) {
         return given()
                 .spec(RequestSpec.setAuth(RequestSpec.getRequestSpec(), accessToken)) // Set the Authorization header
-                .delete("/api/auth/user"); // Replace with the actual endpoint
+                .delete(DELETE_USER_ENDPOINT); // Use the constant for the endpoint
     }
 
     @Step("Assert the value of a key in the response body")
     public void assertResponseMessage(Response response, String key, String expectedValue) {
         String actualValue = response.jsonPath().getString(key);
+        assertEquals("The value of key '" + key + "' is not as expected.", expectedValue, actualValue);
+    }
+
+    @Step("Assert the value of a key in the response HTML body")
+    public void assertResponseMessageHTML(Response response, String key, String expectedValue) {
+        String actualValue = response.htmlPath().getString(key);
         assertEquals("The value of key '" + key + "' is not as expected.", expectedValue, actualValue);
     }
 }

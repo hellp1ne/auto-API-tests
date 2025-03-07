@@ -1,0 +1,231 @@
+{
+  "uid" : "d317c9ca7e036c1d",
+  "name" : "Test updating user data without authorization",
+  "fullName" : "TestUserUpdateParameterizedNegative.testUserUpdateWithAuthorization[Updated email: json.UserUpdateRequest@3a24306e, Updated name: {1}, Updated password: {2}]",
+  "historyId" : "c162b10016055a99e9d5f8d8810998b1",
+  "time" : {
+    "start" : 1741349498206,
+    "stop" : 1741349499838,
+    "duration" : 1632
+  },
+  "description" : "Verify that a user cannot update their data without authorization",
+  "descriptionHtml" : "<p>Verify that a user cannot update their data without authorization</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Verify that a user cannot update their data without authorization",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Send POST request to create a user",
+      "time" : {
+        "start" : 1741349498207,
+        "stop" : 1741349498608,
+        "duration" : 401
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "userRequest",
+        "value" : "json.UserRequest@22251bc6"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Assert the response from the user creation request",
+      "time" : {
+        "start" : 1741349498609,
+        "stop" : 1741349498609,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@367026f"
+      }, {
+        "name" : "expectedStatusCode",
+        "value" : "200"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Extract access token from the response",
+      "time" : {
+        "start" : 1741349498609,
+        "stop" : 1741349498647,
+        "duration" : 38
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@367026f"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Send PATCH request to update user data",
+      "time" : {
+        "start" : 1741349498648,
+        "stop" : 1741349499017,
+        "duration" : 369
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "userUpdateRequest",
+        "value" : "json.UserUpdateRequest@3a24306e"
+      }, {
+        "name" : "accessToken",
+        "value" : "null"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Assert the response from the user creation request",
+      "time" : {
+        "start" : 1741349499017,
+        "stop" : 1741349499018,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@53d257e7"
+      }, {
+        "name" : "expectedStatusCode",
+        "value" : "401"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Assert the value of a key in the response body",
+      "time" : {
+        "start" : 1741349499018,
+        "stop" : 1741349499042,
+        "duration" : 24
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@53d257e7"
+      }, {
+        "name" : "key",
+        "value" : "message"
+      }, {
+        "name" : "expectedValue",
+        "value" : "You should be authorised"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Send DELETE request to delete a user",
+      "time" : {
+        "start" : 1741349499043,
+        "stop" : 1741349499837,
+        "duration" : 794
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "accessToken",
+        "value" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Y2FlMjdhOWVkMjgwMDAxYjU4ZGVhOCIsImlhdCI6MTc0MTM0OTQ5OCwiZXhwIjoxNzQxMzUwNjk4fQ.eMLXQrhI74H4LrURO5rPo0_P2d_i4dWYzKTUun4csik"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Assert the response from the user creation request",
+      "time" : {
+        "start" : 1741349499837,
+        "stop" : 1741349499838,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "response",
+        "value" : "io.restassured.internal.RestAssuredResponseImpl@f7b6b9e"
+      }, {
+        "name" : "expectedStatusCode",
+        "value" : "202"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 8,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "TestUserUpdateParameterizedNegative"
+  }, {
+    "name" : "testMethod",
+    "value" : "testUserUpdateWithAuthorization[Updated email: json.UserUpdateRequest@3a24306e, Updated name: {1}, Updated password: {2}]"
+  }, {
+    "name" : "suite",
+    "value" : "TestUserUpdateParameterizedNegative"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-MENV2I2"
+  }, {
+    "name" : "thread",
+    "value" : "6992@DESKTOP-MENV2I2.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d317c9ca7e036c1d.json",
+  "parameterValues" : [ ]
+}
