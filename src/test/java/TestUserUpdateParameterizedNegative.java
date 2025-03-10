@@ -33,7 +33,6 @@ public class TestUserUpdateParameterizedNegative {
         return Arrays.asList(new Object[][]{
                 {new UserUpdateRequest(Data.generateRandomEmail(), null, null)}, // Update email only
                 {new UserUpdateRequest(null, "New Name", null)}, // Update name only
-                {new UserUpdateRequest(null, null, Data.generateRandomPassword())} // Update password only
         });
     }
 

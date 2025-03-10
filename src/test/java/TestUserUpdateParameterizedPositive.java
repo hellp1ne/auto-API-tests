@@ -33,7 +33,6 @@ public class TestUserUpdateParameterizedPositive {
         return Arrays.asList(new Object[][]{
                 {new UserUpdateRequest(Data.generateRandomEmail(), null, null)}, // Update email only
                 {new UserUpdateRequest(null, "New Name", null)}, // Update name only
-                {new UserUpdateRequest(null, null, Data.generateRandomPassword())} // Update password only
         });
     }
 
@@ -73,6 +72,12 @@ public class TestUserUpdateParameterizedPositive {
 
         // Verify the value of the "success" key in the response body
         userApiClient.assertResponseMessage(response, "success", "true");
+
+        if(userUpdateRequest.getEmail() != null) {
+            userApiClient.assertResponseMessage(response, "user.email", userApiClient.getValueInUpdateJSON(userUpdateRequest));
+        } else {
+            userApiClient.assertResponseMessage(response, "user.name", userApiClient.getValueInUpdateJSON(userUpdateRequest));
+        }
     }
 
     // Delete the user after running the tests

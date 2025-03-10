@@ -109,4 +109,15 @@ public class UserApiClient {
         String actualValue = response.htmlPath().getString(key);
         assertEquals("The value of key '" + key + "' is not as expected.", expectedValue, actualValue);
     }
+
+    @Step("Get value from the JSON of updating data")
+    public String getValueInUpdateJSON(UserUpdateRequest userUpdateRequest) {
+        String newValueOfKey;
+        if(userUpdateRequest.getEmail() != null) {
+            newValueOfKey = userUpdateRequest.getEmail();
+        } else {
+            newValueOfKey = userUpdateRequest.getName();
+        }
+        return newValueOfKey;
+    }
 }
