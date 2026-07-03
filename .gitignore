@@ -1,4 +1,7 @@
+.idea/
+.allure/
 target/
+!target/site/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
